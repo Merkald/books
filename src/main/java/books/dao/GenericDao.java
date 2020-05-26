@@ -3,8 +3,8 @@ package books.dao;
 import books.dao.impl.GenericDaoImpl;
 import java.util.List;
 
-public interface GenericDao<T,V> {
-    GenericDaoImpl<T,V> settClass(Class<T> tClass);
+public interface GenericDao<T, V> {
+    GenericDaoImpl<T, V> setTclass(Class<T> tclass);
 
     T create(T model);
 
@@ -16,5 +16,5 @@ public interface GenericDao<T,V> {
 
     T update(T model);
 
-    boolean deleteById(T model);
+    boolean delete(T model);
 }

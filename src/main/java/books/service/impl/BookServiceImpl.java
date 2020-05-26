@@ -15,17 +15,17 @@ public class BookServiceImpl implements BookService {
 
     @Override
     public Book create(Book model) {
-        return genericDao.settClass(Book.class).create(model);
+        return genericDao.setTclass(Book.class).create(model);
     }
 
     @Override
     public Book getById(Long id) {
-        return genericDao.settClass(Book.class).getById(id);
+        return genericDao.setTclass(Book.class).getById(id);
     }
 
     @Override
     public Book getByField(String fieldName, Object value) {
-        return genericDao.settClass(Book.class).getByField(fieldName,value);
+        return genericDao.setTclass(Book.class).getByField(fieldName,value);
     }
 
     @Override
@@ -39,7 +39,7 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
-    public boolean deleteById(Long id) {
-        return genericDao.deleteById(genericDao.getById(id));
+    public boolean delete(Book model) {
+        return genericDao.delete(model);
     }
 }

@@ -14,5 +14,5 @@ public interface BookService {
 
     Book update(Book model);
 
-    boolean deleteById(Long id);
+    boolean delete(Book model);
 }
